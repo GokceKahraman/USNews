@@ -11,14 +11,20 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var tableview: UITableView!
     
+    @IBOutlet weak var FavoritesButton: UIBarButtonItem!
+    
     var articles: [Article]? = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        view.backgroundColor = .systemMint
         fetchArticles()
     }
+    
+
+    
+    
     
     func fetchArticles(){
         let urlRequest = URLRequest(url: URL(string: "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=3b6742e35411486587d4302d015f6852")!)
@@ -66,10 +72,15 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "articleCell", for: indexPath) as! ArticleCell
         
-        cell.title.text = self.articles?[indexPath.item].headline
-        cell.desc.text = self.articles?[indexPath.item].desc
-        cell.imgView.downloadImage(from: (self.articles?[indexPath.item].imageUrl)!)
-    
+        if let article = self.articles?[indexPath.item] {
+            cell.title.text = article.headline
+            cell.desc.text = article.desc
+            if let picture = article.imageUrl {
+                cell.imgView.downloadImage(from: picture)
+
+            }
+        }
+        
         
         return cell
     }
@@ -85,6 +96,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        self.performSegue(withIdentifier: <#T##String#>, sender: <#T##Any?#>)
+    }
+    
+    
 }
 
 extension UIImageView{
@@ -102,6 +119,8 @@ extension UIImageView{
             }
         }
         task.resume()
+        
+    
     }
 }
 
