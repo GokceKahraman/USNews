@@ -9,6 +9,9 @@ import Foundation
 
 class FavoritePageVC : UIViewController {
     
+    @IBOutlet weak var favTableView: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

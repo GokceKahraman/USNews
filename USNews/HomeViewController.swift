@@ -12,6 +12,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var tableview: UITableView!
     
     @IBOutlet weak var FavoritesButton: UIBarButtonItem!
+       
+    
+
     
     var articles: [Article]? = []
     
@@ -98,7 +101,20 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        self.performSegue(withIdentifier: <#T##String#>, sender: <#T##Any?#>)
+
+        self.performSegue(withIdentifier: "toDetail", sender: indexPath.row)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetail"{
+               
+            let destination = segue.destination as! DetailPageVC
+            if let newIndex = tableview.indexPathForSelectedRow?.row {
+                let article = self.articles?[newIndex]
+                destination.new = article
+            } //tableView.indexPathForSelectedRow?.row
+            
+        }
     }
     
     

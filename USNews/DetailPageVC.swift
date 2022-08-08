@@ -10,9 +10,17 @@ import UIKit
 
 class DetailPageVC : UIViewController{
     
+    @IBOutlet weak var lTitle: UILabel!
+    @IBOutlet weak var lDesc: UILabel!
+    
+    var new: Article?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+         
+        lTitle.text = new?.headline
+        lDesc.text = new?.desc
+        
     }
 
 }

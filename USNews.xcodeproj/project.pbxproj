@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		733FABF0289D6BE80011F18E /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733FABEF289D6BE80011F18E /* FavoriteCell.swift */; };
 		737BC0592897E3B4008A0D95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737BC0582897E3B4008A0D95 /* AppDelegate.swift */; };
 		737BC05B2897E3B4008A0D95 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737BC05A2897E3B4008A0D95 /* SceneDelegate.swift */; };
 		737BC05D2897E3B4008A0D95 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737BC05C2897E3B4008A0D95 /* HomeViewController.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		733FABEF289D6BE80011F18E /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
 		737BC0552897E3B4008A0D95 /* USNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = USNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		737BC0582897E3B4008A0D95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		737BC05A2897E3B4008A0D95 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				737BC08C2898063B008A0D95 /* DetailPageVC.swift */,
 				737BC05E2897E3B4008A0D95 /* Main.storyboard */,
 				737BC092289AB00E008A0D95 /* ArticleCell.swift */,
+				733FABEF289D6BE80011F18E /* FavoriteCell.swift */,
 				737BC094289AB641008A0D95 /* Article.swift */,
 				737BC090289838F6008A0D95 /* FavoritePageVC.swift */,
 				737BC0612897E3B6008A0D95 /* Assets.xcassets */,
@@ -311,6 +314,7 @@
 				737BC05D2897E3B4008A0D95 /* HomeViewController.swift in Sources */,
 				737BC091289838F6008A0D95 /* FavoritePageVC.swift in Sources */,
 				737BC0592897E3B4008A0D95 /* AppDelegate.swift in Sources */,
+				733FABF0289D6BE80011F18E /* FavoriteCell.swift in Sources */,
 				737BC05B2897E3B4008A0D95 /* SceneDelegate.swift in Sources */,
 				737BC08D2898063B008A0D95 /* DetailPageVC.swift in Sources */,
 			);
